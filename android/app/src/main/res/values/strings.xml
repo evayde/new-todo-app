@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">next-todo-app</string>
+    <string name="title_activity_main">next-todo-app</string>
+    <string name="package_name">my.todo.app</string>
+    <string name="custom_url_scheme">my.todo.app</string>
+</resources>
