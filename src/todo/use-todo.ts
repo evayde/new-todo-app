@@ -95,7 +95,11 @@ const useTodo = () => {
     db.get({key: "todos"})
       .then((res: CapacitorSQLPlugin.capDataStorageResult) => {
         if (res) {
-          setTodos(JSON.parse(res.value || "[]"));
+          const loadedTodos: any[] = JSON.parse(res.value || "[]");
+          // We have to format the duedate of the loaded todos
+          setTodos(
+            loadedTodos.map(t => ({...t, duedate: new Date(t.duedate)}))
+          );
         }
       });
   }, [db]);
